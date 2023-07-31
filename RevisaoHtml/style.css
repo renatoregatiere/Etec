@@ -1,0 +1,29 @@
+body{
+    background-color: rgba(0, 0, 0, 0.842);
+    color: white;
+}    
+table{
+    border: 2px solid ;            
+}
+tr{
+    border: 2px 2px solid wheat;
+}    
+td{
+    border: 2px solid;
+}
+.brigadeiro{
+    width: 100px;
+}
+.bolo{
+    width: 100px;
+}
+.pudim{
+    width: 100px;
+    height: 80px;
+}
+.pave{
+    width: 100px;
+}
+a{
+    color: white;
+}
