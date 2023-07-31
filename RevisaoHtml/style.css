@@ -3,13 +3,21 @@ body{
     color: white;
 }    
 table{
-    border: 2px solid ;            
+    border: 2px solid ;   
+    background-color: gray;   
+    box-shadow: 5px 5px 5px white; 
+    border-radius: 10px;   
+    float:left;
+    margin-left: 40%; 
 }
 tr{
     border: 2px 2px solid wheat;
+    text-align: center;
+    border-radius: 10px; 
 }    
 td{
     border: 2px solid;
+    border-radius: 10px; 
 }
 .brigadeiro{
     width: 100px;
@@ -26,4 +34,10 @@ td{
 }
 a{
     color: white;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
 }
