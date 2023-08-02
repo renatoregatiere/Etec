@@ -40,3 +40,6 @@ h1{
 h2{
     text-align: center;
 }
+li{
+    overflow: hidden;
+}
