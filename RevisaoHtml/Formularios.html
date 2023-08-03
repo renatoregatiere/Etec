@@ -5,16 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <label for="">Nome</label>
-    <input type="text" name="nome" id="nome" placeholder="Digite aqui seu nome" >
+    <h1>Deixe sua opnião sobre o evento!</h1>
+    <br><br>
+    <label for="">Nome completo</label>
+    <input type="text" name="nome" id="nome" placeholder="Digite seu nome" >
+    <br><br>
+    <label for="">E-mail</label>
+    <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+    <br><br>  
+    <label for="">Cidade onde Mora</label>
+    <select name="cidade" id="cidade">
+        <option value="Rio Preto">Rio Preto</option>
+        <option value="Mirassol">Mirassol</option>
+        <option value="Cedral">Cedral</option>        
+    </select>
+    <br><br>     
+    <label for="">O que achou do coffee break</label><br>
+    <input type="checkbox" name="eporte" id="1">1
+    <input type="checkbox" name="eporte" id="2">2
+    <input type="checkbox" name="eporte" id="3">3
+    <input type="checkbox" name="eporte" id="4">4
+    <input type="checkbox" name="eporte" id="5">5
+    <br><br>
+    <label for="">O que achou do almoço?</label><br>
+    <input type="checkbox" name="eporte" id="1">1
+    <input type="checkbox" name="eporte" id="2">2
+    <input type="checkbox" name="eporte" id="3">3
+    <input type="checkbox" name="eporte" id="4">4
+    <input type="checkbox" name="eporte" id="5">5
+    <br><br>
+    <label for="">O que achou do jantar?</label><br>
+    <input type="checkbox" name="eporte" id="1">1
+    <input type="checkbox" name="eporte" id="2">2
+    <input type="checkbox" name="eporte" id="3">3
+    <input type="checkbox" name="eporte" id="4">4
+    <input type="checkbox" name="eporte" id="5">5
+    <br><br>
+    <label for="">Marque um curso que você mais gosta</label><br>
+    <input type="radio" name="curso" id="curso1"> Desenvolvimento de Sistemas
+    <input type="radio" name="curso" id="curso2"> Edificações
+    <input type="radio" name="curso" id="curso3"> Mecatrônic    
+        <br><br>
+        <input type="checkbox" name="" id=""><label for="">Marque para receber notócias sobre os próximos eventos</label>
+    <br><br>
+    <label for="">Deixe alguma sugestão ou critica sobre o evento</label>
     <br>
-    <br>
-    <label for="">Sobrenome</label>
-    <input type="text" name="sobrenome" id="sobrenome" placeholder="digite aqui seu sobrenome">
-    <br>
-
-
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <br><br>   
+        <input type="reset" value="Limpar">
+        <input type="submit" value="Enviar">
 </body>
 </html>
