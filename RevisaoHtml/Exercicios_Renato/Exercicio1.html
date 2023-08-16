@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+    <script>
+        var valorProduto, codigo, valorReajustado, difenca,ok=true;
+
+        valorProduto = parseFloat(prompt("Digite o valor do produto: "));
+        codigo = parseInt(prompt("Digite o código do produto: "));
+        if(codigo==1)
+            valorReajustado=valorProduto+valorProduto*0.15;
+        else if(codigo==3)
+            valorReajustado=valorProduto+valorProduto*0.20;
+        else if(codigo==4)
+            valorReajustado=valorProduto+valorProduto*0.35;
+        else if(codigo==8)
+            valorReajustado=valorProduto+valorProduto*0.40;
+        else if(codigo==10)
+            valorReajustado=valorProduto+valorProduto*0.40;
+        else {
+            alert("Código inválido");
+            ok=false;
+            
+        }
+        if(OK==true){
+            difenca=valorReajustado-valorProduto
+
+            alert("Valor do produto "+valorProduto+"\nCódigo do produto "+codigo+"\nValor Reajustado "+valorReajustado+"\nDiferença "+difenca);
+
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
