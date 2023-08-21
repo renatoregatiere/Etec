@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+    <script>
+        var codigo,qtd,soma;
+        codigo = parseInt(prompt("Digite o código: "));
+        
+        
+        if(codigo < 100 || codigo > 104)
+            alert("Código invalido!");
+        else{
+            qtd = parseInt(prompt("Digite a quantidade: "));
+            if(codigo == 100){
+                soma = qtd * 11;
+                alert("Cachorro quente"+"\nQuantidade: "+qtd+"\nValor Total: "+soma);}
+
+            else if(codigo == 101){
+                soma = qtd * 15;
+                alert("Hambúrger"+"\nQuantidade: "+qtd+"\nValor Total: "+soma);}
+
+            else if(codigo == 102){
+                soma = qtd * 18;
+                alert("X-burguer"+"\nQuantidade: "+qtd+"\nValor Total: "+soma);}
+
+            else if(codigo == 103){
+                soma = qtd * 11.50;
+                alert("X-Bauru Simples"+"\nQuantidade: "+qtd+"\nValor Total: "+soma);}
+
+            else if(codigo == 104){
+                soma = qtd * 14.50;
+                alert("Bauru duplo"+"\nQuantidade: "+qtd+"\nValor Total: "+soma);}
+            }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
