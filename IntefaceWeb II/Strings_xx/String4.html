@@ -10,7 +10,14 @@
 		/*Programa em JavaScript que solicite uma palavra e 
 		exiba parte da palavra */
    
-		
+		var palavra,parte1,parte2;
+
+		palavra=prompt("Digite uma palavra")
+		parte1=palavra.slice(0,3);/*vai a partir do indice 0 até o indice 3(mas não inclui o indice3)*/
+
+		parte2=palavra.slice(4);/*vai do indice 4 em diante*/
+
+		alert("Palavra digitada "+palavra+"\nParte 1 "+parte1+"\nParte 2 "+parte2)
 		 
 	  </script>
 </body>
