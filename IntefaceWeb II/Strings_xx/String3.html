@@ -10,6 +10,19 @@
       /*Programa em JavaScript que solicita um endereço de email e verifica se 
       é valido (contem arroba @) mostrando mensagem de valido ou invalido */
         
+      var email,procura;
+
+      email=prompt("Digtie o endereço de email");
+      procura = email.indexOf("@");
+
+      if(procura==-1){
+         alert("Email inválido");
+      }
+      else{
+         alert("o e-mail "+email+" é valido");
+      }
+
+
       </script>
      
 </body>
