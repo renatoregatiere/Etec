@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1 - switch/case</title>
+    <script>
+      var valorProduto, codigo, valorReajustado, diferenca, ok=true;
+
+      valorProduto=prompt("Digite o valor do produto");
+      valorProduto=parseFloat(valorProduto);
+
+      codigo=prompt("Digite o código do produto");
+      codigo=parseInt(codigo);
+
+       switch(codigo){
+	    case 1:
+	     valorReajustado=valorProduto * 1.15;
+	     break;
+
+         case 3:
+	      valorReajustado=valorProduto * 1.2;
+	     break;
+
+	    case 4:
+	      valorReajustado= valorProduto * 1.35;
+	      break;
+
+	    case 8:
+	    case 10:
+	     valorReajustado=valorProduto * 1.40;
+	     break;
+
+	     default:
+		alert("Código invalido");
+                ok=false;
+	  }
+      
+      if(ok==true){
+        diferenca=valorReajustado-valorProduto;
+
+        alert("Valor do produto "+valorProduto +
+              "\nCódigo do produto "+codigo +
+              "\nValor reajustado "+ valorReajustado +
+              "\nDiferença: "+ diferenca);
+      }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

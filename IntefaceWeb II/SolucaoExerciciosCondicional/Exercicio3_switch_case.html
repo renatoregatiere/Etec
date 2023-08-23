@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3 switch/case</title>
+    <script>
+     var cod, quant,nomeLanche, valorUnitario, valorTotal,ok=true;
+
+     cod=prompt("Digite o codigo do lanche 100 a 104");
+     cod=parseInt(cod);
+
+     quant=prompt("Digite a quantidade comprada");
+     quant=parseInt(quant);
+
+     switch(cod){
+      case 100:
+        nomeLanche="cachorro quente";
+        valorUnitario=11;
+		break;
+      case 101:
+        nomeLanche="hamburguer";
+        valorUnitario=15;
+		break;
+	  case 102:    
+        nomeLanche="x-burguer";
+        valorUnitario=18;
+		break;
+      case 103:
+       nomeLanche="bauru simples";
+       valorUnitario=11.5;
+	   break;
+      case 104:
+        nomeLanche="bauru duplo";
+        valorUnitario=14.5;
+		break;
+    default:
+        alert("Código invalido");
+        ok=false;
+    }
+
+     if(ok==true){
+       valorTotal=valorUnitario*quant;
+       alert("Nome do lanche: "+nomeLanche +
+            "\nQuantidade: "+quant +
+            "\nValor total: "+ valorTotal);
+     }
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
