@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercicio 2</title>
     <script>
         /*Faça um programa em JavaScript que solicite o nome de uma pessoa e exiba o nome desta pessoa em letras maiúsculas somente se a primeira letra do nome for a ou A. Caso contrário exiba o nome da pessoa em letras minúsculas.*/
+
+        var nome,maiuscula,primeira,
+
+        nome=prompt("Digite seu nome");
+        maiuscula=nome.toUpperCase();
+        primeira=nome[0];
+
+        if(primeira=="a" || primeira=="A")
+            alert(maiuscula);
+        else
+            alert(nome);
     </script>
 </head>
 <body>
