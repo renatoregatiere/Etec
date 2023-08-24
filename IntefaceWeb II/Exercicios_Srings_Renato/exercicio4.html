@@ -17,9 +17,9 @@ Faça um programa em JavaScript que solicite o nome de uma pessoa, o dia do nasc
         nome=prompt("Digite seu nome");
         dia=parseInt(prompt("Digite o dia do seu nascimento"))
 
-        senha=nome[0,2]
+        senha=nome.slice(0,3);
 
-        document.write(senha)
+        document.write("A sugerida é: "+senha+dia);
 
 
     </script>
