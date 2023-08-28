@@ -9,19 +9,17 @@
     </style>
     <script>
         /*Faça um programa em JavaScript que solicite uma palavra e verifique a quantidade de letras da palavra. Caso tenha até 8 caracteres exiba a palavra em cor vermelha, caso contrário exiba a palavra na cor azul. (document.write)
-document.write(“<p style=color:orange> xxxxxx </p>”)*/
+document.write(“<p style=color:orange>"+ xxxxxx "+</p>”)*/
 
         var palavra,qtd,red,blue;
         palavra=prompt("Digite uma palavra");
         qtd=palavra.length;
 
-        red=palavra.fontcolor("red");
-        blue=palavra.fontcolor("blue");
-
         if(qtd==8)
-            document.write(red);
+           document.write("<p style=color:orange>"+ palavra +"</p>");
+            
         else
-            document.write(blue);
+        document.write("<p style=color:orange>"+ palavra +"</p>");
 
     </script>
 </head>
