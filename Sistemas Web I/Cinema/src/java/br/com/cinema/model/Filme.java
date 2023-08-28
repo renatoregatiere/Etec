@@ -1,3 +1,5 @@
+
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -25,35 +27,37 @@ public class Filme {
         this.genero = genero;
     }
     
-    public String getNomeFilme(){
-        return nomeFilme;
+
+    public String getNomeFilme() {
+        return this.nomeFilme;
     }
-    
-    public void setNomeFilme(String nomeFilme){
+
+    public void setNomeFilme(String nomeFilme) {
         this.nomeFilme = nomeFilme;
     }
-    
-    public String getSinopse(){
-        return sinopse;
+
+    public String getSinopse() {
+        return this.sinopse;
     }
-    
-    public void setNomeSinopse(String nomeSinopse){
+
+    public void setSinopse(String sinopse) {
         this.sinopse = sinopse;
     }
-    
-    public String getDuracao(){
-        return duracao;
+
+    public String getDuracao() {
+        return this.duracao;
     }
-    
-    public void setNomeDuracao(String nomeDuracao){
+
+    public void setDuracao(String duracao) {
         this.duracao = duracao;
     }
-    
-    public String getGenero(){
-        return genero;
+
+    public String getGenero() {
+        return this.genero;
     }
-    
-    public void setNomeGenero(String nomeGenero){
+
+    public void setGenero(String genero) {
         this.genero = genero;
     }
+    
 }
