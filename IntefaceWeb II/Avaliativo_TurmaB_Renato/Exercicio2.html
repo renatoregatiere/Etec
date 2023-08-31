@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 2</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 2</title>
 </head>
+
 <body>
-    <script>
-      /*Uma empresa de transportes calcula o frete de 
+  <script>
+    /*Uma empresa de transportes calcula o frete de 
       acordo com a categoria de produtos a ser transportado. 
       Faça um programa em JavaScript que solicite a distância 
       em quilômetros a ser percorrida, solicite a categoria do 
@@ -22,9 +24,31 @@
 		Valor do frete:
 		
 		*/
-		   
-
-
-    </script>
+    var frete, distancia, categoria, ok = true;
+    b = 12
+    e = 15
+    p = 18
+    distancia = parseFloat(prompt("Digite a distancia a ser percorrida"));
+    if (distancia <= 0)
+      alert("Digite uma distancia maior que 0");
+    categoria = prompt("Escolha uma categoria:\nP-Perecível\nE-Enlatado\nB-Bebida");
+    if (categoria == "B" || categoria == "b")
+      frete = distancia * b;
+    else if (categoria == "E" || categoria == "e")
+      frete = distancia * e;
+    else if (categoria == "P" || categoria == "p")
+      frete = distancia * p;
+    else {
+      alert("Categoria inválida");
+      ok = false;
+    }
+    if (ok == true)
+      alert(
+        "Distanca é de " + distancia + " km\n" +
+        "Categoria: " + categoria +
+        "\nValor do frete: " + frete
+      );
+  </script>
 </body>
+
 </html>

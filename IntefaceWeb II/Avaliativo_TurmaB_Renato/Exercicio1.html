@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio 1</title>
 </head>
+
 <body>
     <script>
-     /*Uma escola de natação matricula alunos de 1 a 20 anos 
+        /*Uma escola de natação matricula alunos de 1 a 20 anos 
      e divide os mesmos alunos em categorias de acordo com a idade. 
      Faça um programa em JavaScript que solicite a idade de um 
      aluno e exiba a categoria que ele se enquadra.
@@ -17,9 +19,24 @@
         10 a 12           infantil
         13 a 15           juvenil
         16 a 20           adulto*/
-  
 
+        var idade, categoria;
 
+        idade = parseInt(prompt("Digite sua idade"));
+        if (idade >= 1 && idade <= 2)
+            categoria = "baby";
+        else if (idade >= 3 && idade <= 9)
+            categoria = "mirim";
+        else if (idade >= 10 && idade <= 12)
+            categoria = "infantil";
+        else if (idade >= 13 && idade <= 15)
+            categoria = "juvenil";
+        else if (idade >= 16 && idade <= 20)
+            categoria = "adulto";
+        else
+            categoria = "Idade inválida";
+        alert("Sua categoria é: " + categoria);
     </script>
 </body>
+
 </html>

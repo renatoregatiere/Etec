@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio 3</title>
 </head>
+
 <body>
     <script>
-      /*Faça um programa em JavaScript que solicite o primeiro nome
+        /*Faça um programa em JavaScript que solicite o primeiro nome
        de uma pessoa. Se o primeiro nome possuir 
        5 caracteres mostre o nome em letras maiúsculas, 
        caso contrario mostre o nome em letras minúsculas */
 
+        var nome, qtd;
+        nome = prompt("Digite seu primeiro nome");
+        qtd = nome.length;
+        if (qtd == 5)
+            nome = nome.toUpperCase();
+        else
+            nome = nome.toLowerCase();
+        alert(nome)
     </script>
 </body>
+
 </html>
