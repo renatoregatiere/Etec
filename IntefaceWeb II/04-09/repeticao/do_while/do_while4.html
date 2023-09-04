@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>do while 4</title>
+</head>
+
+<body>
+	<script>
+		/* Faça um programa em JavaScript que solicite 10 números
+		inteiros e exiba
+		os números pares digitados
+		os números impares digitados 
+		em um alert - usar do while*/
+		var cont = 1,
+			num, acumPar = "",
+			acumImpar = "";
+		do {
+			num = prompt("Digite um número inteiro");
+			num = parseInt(num);
+
+			if (num % 2 == 0)
+				acumPar = acumPar + ' ' + num;
+			else
+				acumImpar = acumImpar + ' ' + num;
+			cont++;
+		} while (cont <= 10);
+		alert('Os números pares são: ' + acumPar + '\nOs números impares são: ' + acumImpar);
+	</script>
+</body>
+
+</html>

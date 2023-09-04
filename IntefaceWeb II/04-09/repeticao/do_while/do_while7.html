@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>do while 7</title>
+</head>
+
+<body>
+	<script>
+		/* Faça um programa em JavaScript que solicite 10 números
+	   inteiros e exiba 
+	   a soma dos pares digitados
+	   a soma dos impares digitados
+	   digitados - usar do while */
+		var cont = 1,
+			num, somaPar = 0,
+			somaImpar = 0;
+
+		do {
+			num = parseInt(prompt('Digite o ' + cont + 'º número'));
+			if (num % 2 == 1)
+				somaImpar = somaImpar + num;
+			else
+				somaPar = somaPar + num;
+			cont++
+		} while (cont <= 10);
+		alert('Soma dos pares: ' + somaPar + '\nSoma dos impares: ' + somaImpar);
+	</script>
+</body>
+
+</html>

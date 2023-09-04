@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>do while 5</title>
+</head>
+
+<body>
+	<script>
+		/* Faça um programa em JavaScript que solicite 5 números
+		inteiros e exiba a soma dos números digitados 
+		em um alert - usar do while*/
+		var cont = 1,
+			n, soma = 0;
+		do {
+			n = parseInt(prompt('Digite o ' + cont + 'º número.'))
+			soma = soma + n;
+			cont++;
+		} while (cont <= 5);
+		alert('A soma é: ' + soma);
+	</script>
+
+</body>
+
+</html>
