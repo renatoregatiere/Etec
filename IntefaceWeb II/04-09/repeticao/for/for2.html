@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>for 2</title>
+</head>
+
+<body>
+	<script>
+		/* Faça um programa em JavaScript que solicite a idade de 15 pessoas 
+     calcule e exiba
+    quantidade de pessoas que possuem de 1 até 50 anos
+    quantidade de pessoas que possuem acima de 50 anos
+	usar  for */
+
+		var id, cont, qteAte50 = 0,
+			qteMais50 = 0;
+
+		for (cont = 0; cont < 15; cont++) {
+			id = prompt("Digite sua idade");
+			id = parseInt(id);
+			if (id >= 1 && id <= 50)
+				qteAte50++;
+			else
+				qteMais50++;
+		}
+		alert('Quantidade de pessoas até 50 anos: ' + qteAte50 + '\nQuantidade de pessoas mais de 50 anos: ' + qteMais50);
+	</script>
+
+	<body>
+	</body>
+
+</html>

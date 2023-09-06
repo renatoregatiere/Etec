@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>while 2</title>
+</head>
+
+<body>
+  <script>
+    /* Faça um programa em JavaScript que solicite 15 
+     números e  exiba 
+•	Os  números maiores que 50
+•	Os números menores que 50
+   usar while*/
+    var n, cont = 0,
+      maiores50 = "",
+      menores50 = "";
+    while (cont <= 14) {
+      n = prompt("Digite um numero inteiro");
+      n = parseInt(n);
+
+      if (n > 50)
+        maiores50 = maiores50 + ' ' + n;
+      else if (n < 50)
+        menores50 = menores50 + ' ' + n;
+
+      cont++;
+    }
+    alert('Números maior que 50: ' + maiores50 + '\nNúmeros menores que 50: ' + menores50)
+  </script>
+
+</body>
+
+</html>

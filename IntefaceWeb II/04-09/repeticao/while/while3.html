@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>while 3</title>
+</head>
+
+<body>
+  <script>
+    /* Faça um programa em Javascript que solicite o 
+	nome e a idade de 5 pessoas e 
+	mostre os nomes e suas respectivas idades 
+	somente das pessoas que possuem a partir de 50 anos 
+	usar while */
+    var id, nome, cont = 0,
+      acumNomeId = "";
+
+    while (cont <= 4){
+      nome = prompt('Digite seu nome');
+      id = parseInt(prompt(nome+', Digite sua idade'));
+      if(id>=50)
+        acumNomeId=acumNomeId+' '+ nome + ' - '+id+'\n';
+
+      cont++
+    }
+    alert('Pessoas a partir de 50 anos: \n'+acumNomeId);
+  </script>
+
+</body>
+
+</html>
