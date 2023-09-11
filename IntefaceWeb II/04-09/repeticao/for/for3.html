@@ -26,13 +26,17 @@
 	•	Quantidade de votos nulos
 	•	Quantidade de votos brancos* - usar for*/
 
-		var i, qtdEleitores, chapa1, chapa2, nulo, branco, voto;
+		var i, qtdEleitores, chapa1 = 0,
+			chapa2 = 0,
+			nulo = 0,
+			branco = 0,
+			voto;
 
 		qtdEleitores = parseInt(prompt('Quantos eleitores?'));
 
-		for (i=0; i <= qtdEleitores; i++) {
-			voto = parseInt(prompt('Dgite uma opção abaixo:\n1-Chapa 1\n2-Chapa2\n3-Voto Nulo\n4-Voto Branco'));
-			
+		for (i = 1; i <= qtdEleitores; i++) {
+			voto = parseInt(prompt('Dgite uma opção abaixo:\n1-Chapa 1\n2-Chapa 2\n3-Voto Nulo\n4-Voto Branco'));
+
 			if (voto == 1)
 				chapa1++;
 			else if (voto == 2)
@@ -41,8 +45,10 @@
 				nulo++;
 			else if (voto == 4)
 				branco++;
+			else
+				i--;
 		}
-		alert('Chapa 1: '+chapa1+'\nChapa2: '+chapa2+'Nulo: '+nulo+'Branco: '+branco)
+		alert('Chapa 1: ' + chapa1 + '\nChapa2: ' + chapa2 + '\nNulo: ' + nulo + '\nBranco: ' + branco);
 	</script>
 </body>
 

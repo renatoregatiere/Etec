@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex01</title>
+    <script>
+        /*
+        Triglicérides, ou triglicerídeos, advém das gorduras que consumimos em nossa alimentação. O índice de triglicérides no organismo humano deve ser controlado e é possível saber se uma pessoa possui o a quantidade ideal através da tabela abaixo:
+        <150 desejável
+        De 150 a 199 limite
+        200 a 499 alto
+        Maior que 499 Muito alto
+        Faça um programa em JavaScript que solicite o nome e o índice de triglicérides de 10 pessoas, calcule e exiba os nomes das pessoas que o triglicérides está muito alto, os nomes das pessoas em que o triglicérides está no limite.
+        */
+        var i = 1,
+            nome, 
+            indice = 0;
+            limite;
+            muitoAlto = 0;
+        do {
+            nome = prompt('Digite seu nome:');            
+            indice = parseFloat(nome+' Digite seu seu nível de triglicérides');
+            if(indice>=150 && indice <=199){
+                limite = nome + ' ';            
+            }
+            else if(indice>499){
+                muitoAlto = nome + ' ';
+            }
+        } while (i <= 3)
+
+        alert('Pessoas  no limite: \n'+limite+'\nPessoas Muito alto:\n'+muitoAlto);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

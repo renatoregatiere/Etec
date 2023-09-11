@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex01</title>
+    <script>
+        /*
+        Faça um programa em JavaScript que solicite o peso e a idade de 10 pessoas, calcule e exiba a média dos pesos e a media das idades de todos os entrevistados.
+        */
+        var i = 1,
+            idade = 0,
+            peso = 0,
+            media = 0,
+            soma = 0;
+
+        while (i <= 10) {
+            idade = parseInt(prompt('Digite a ' + i + 'º idade'))
+            soma = soma + idade;
+            i++;
+        }
+        media = soma / (i - 1);
+        alert('A média das idades é ' + media);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
