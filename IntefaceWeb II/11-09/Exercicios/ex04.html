@@ -9,16 +9,20 @@
         /*
         Faça um programa em JavaScript que solicite 15 números entre 0 e 200 calcule e exiba a soma dos números digitados que são maiores que 100, a soma dos números digitados que são menores ou iguais a 100.
         */
-        var maior, menor, n, i;
+        var maior = 0,
+            menor = 0,
+            n, i;
 
         for (i = 1; i <= 3; i++) {
             n = parseInt(prompt('Digite o ' + i + 'º entre 0 e 200:'));
-            if (n > 100) {
+            if (n > 100 && n <= 200) {
                 maior = maior + n;
-            } else if (n <= 100) {
+            } else if (n >= 0 && n <= 100) {
                 menor = menor + n;
+            } else {
+                alert('Número invalido!\nDigite um número entre 0 e 200!');
+                i--;
             }
-            i++;
         }
         document.write('Soma dos números maiores que 100: ' + maior +
             '<br>Soma dos números menores ou igual a 100: ' + menor)
