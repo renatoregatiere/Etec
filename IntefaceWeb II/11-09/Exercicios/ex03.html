@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ex01</title>
+    <title>Ex03</title>
     <script>
         /*
         Triglicérides, ou triglicerídeos, advém das gorduras que consumimos em nossa alimentação. O índice de triglicérides no organismo humano deve ser controlado e é possível saber se uma pessoa possui o a quantidade ideal através da tabela abaixo:
@@ -12,26 +12,25 @@
         De 150 a 199 limite
         200 a 499 alto
         Maior que 499 Muito alto
-        Faça um programa em JavaScript que solicite o nome e o índice de triglicérides de 10 pessoas, calcule e exiba os nomes das pessoas que o triglicérides está muito alto, os nomes das pessoas em que o triglicérides está no limite.
+        Faça um programa em JavaScript que solicite o nome e o índice de triglicérides de 10 pessoas, calcule e exiba os nomes das pessoas que o triglicérides está muito alto, os nomes das pessoas em que o triglicérides está no limite.]
         */
         var i = 1,
-            nome, 
-            indice = 0;
-            limite;
-            muitoAlto = 0;
+            nome,
+            indice = 0,
+            limite = '',
+            muitoAlto = '';
         do {
-            nome = prompt('Digite seu nome:');            
-            indice = parseFloat(nome+' Digite seu seu nível de triglicérides');
-            if(indice>=150 && indice <=199){
-                limite = nome + ' ';            
+            nome = prompt('Digite seu nome:');
+            indice = parseFloat(prompt('Digite seu seu nível de triglicérides'));
+            if (indice >= 150 && indice <= 199) {
+                limite = limite + nome + '\n';
+            } else if (indice > 499) {
+                muitoAlto = muitoAlto + nome + '\n';
             }
-            else if(indice>499){
-                muitoAlto = nome + ' ';
-            }
-        } while (i <= 3)
+            i++;
+        } while (i <= 10)
 
-        alert('Pessoas  no limite: \n'+limite+'\nPessoas Muito alto:\n'+muitoAlto);
-
+        alert('No imite: \n' + limite + '\nMuito alto:\n' + muitoAlto);
     </script>
 </head>
 

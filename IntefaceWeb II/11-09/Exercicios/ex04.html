@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex04</title>
+    <script>
+        /*
+        Faça um programa em JavaScript que solicite 15 números entre 0 e 200 calcule e exiba a soma dos números digitados que são maiores que 100, a soma dos números digitados que são menores ou iguais a 100.
+        */
+        var maior, menor, n, i;
+
+        for (i = 1; i <= 3; i++) {
+            n = parseInt(prompt('Digite o ' + i + 'º entre 0 e 200:'));
+            if (n > 100) {
+                maior = maior + n;
+            } else if (n <= 100) {
+                menor = menor + n;
+            }
+            i++;
+        }
+        document.write('Soma dos números maiores que 100: ' + maior +
+            '<br>Soma dos números menores ou igual a 100: ' + menor)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
