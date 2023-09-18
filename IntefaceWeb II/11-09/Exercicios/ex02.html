@@ -19,9 +19,9 @@
 
         while (i <= 3) {
             idade = parseInt(prompt('Digite a ' + i + 'º idade'))
-            soma = soma + idade;
-            peso = parseInt(prompt('Digite seu peso'))
-            somapeso = somapeso + peso;
+            soma += idade;
+            peso = parseFloat(prompt('Digite seu peso'))
+            somapeso += peso;
             i++;
         }
         media = soma / (i - 1);

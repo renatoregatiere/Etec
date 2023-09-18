@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validacao 6</title>
+</head>
+<body>
+	<script>
+		/* Faça um programa em JavaScript que valide a entrada só aceitando valores 
+		inteiros de 1 até 100 
+		exibir mensagem de erro para o usuario*/
+		var num;
+		
+		do{
+		  num=prompt("Digite um número de 1 a 100");
+		  num=parseInt(num);
+		  if(isNaN(num)|| num <1 || num>100)
+		    alert("Entrada inválida");
+		  	     		 			
+	      			
+		}while (isNaN(num)|| num <1 || num>100); //condicao da repeticao
+	
+
+	</script>
+
+</body>
+</html>

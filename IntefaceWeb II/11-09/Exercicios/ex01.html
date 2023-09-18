@@ -9,17 +9,15 @@
         /*
         Faça um programa em JavaScript que solicite a idade de 15 pessoas e exiba somente as idades das pessoas que tem mais de 25 anos.
         */
-        var i, idade, maior25 = 0;
+        var i, idade, maior25 ="";
 
         for (i = 1; i <= 3; i++) {
             idade = parseInt(prompt('Digite a idade da ' + i + 'ª pessoa'))
-
             if (idade > 25) {
-                maior25 = maior25 + idade + '\n';
+                maior25 = maior25 + idade+'\n';
             }
-
         }
-        alert('As idades maior que 25 anos são:\n' + maior25 + '\n')
+        alert('As idades maior que 25 anos são:\n' + maior25)
     </script>
 </head>
 

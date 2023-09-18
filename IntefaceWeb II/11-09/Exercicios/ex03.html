@@ -23,13 +23,12 @@
             nome = prompt('Digite seu nome:');
             indice = parseFloat(prompt('Digite seu seu nível de triglicérides'));
             if (indice >= 150 && indice <= 199) {
-                limite = limite + nome + '\n';
+                limite += nome + '\n';
             } else if (indice > 499) {
-                muitoAlto = muitoAlto + nome + '\n';
+                muitoAlto += nome + '\n';
             }
             i++;
         } while (i <= 10)
-
         alert('No imite: \n' + limite + '\nMuito alto:\n' + muitoAlto);
     </script>
 </head>
