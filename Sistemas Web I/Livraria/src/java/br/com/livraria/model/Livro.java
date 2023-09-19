@@ -10,47 +10,47 @@ package br.com.livraria.model;
  */
 public class Livro {
 
-    private String idLivro;
-    private String generoLivro;
-    private Autor autor;
+    private int idLivro;
+    private String nomeLivro;
+    private String autorLivro;
     private String resumoLivro;
     private double precoLivro;
-    private int isbnLivro;
+    private String isbnLivro;
 
     public Livro() {
     }
 
-    public Livro(String idLivro, String generoLivro, Autor autor, String resumoLivro, double precoLivro, int isbnLivro) {
+    public Livro(int idLivro, String nomeLivro, String autorLivro, String resumoLivro, double precoLivro, String isbnLivro) {
         this.idLivro = idLivro;
-        this.generoLivro = generoLivro;
-        this.autor = autor;
+        this.nomeLivro = nomeLivro;
+        this.autorLivro = autorLivro;
         this.resumoLivro = resumoLivro;
         this.precoLivro = precoLivro;
         this.isbnLivro = isbnLivro;
     }
 
-    public String getIdLivro() {
+    public int getIdLivro() {
         return idLivro;
     }
 
-    public void setIdLivro(String idLivro) {
+    public void setIdLivro(int idLivro) {
         this.idLivro = idLivro;
     }
 
-    public String getGeneroLivro() {
-        return generoLivro;
+    public String getNomeLivro() {
+        return nomeLivro;
     }
 
-    public void setGeneroLivro(String generoLivro) {
-        this.generoLivro = generoLivro;
+    public void setNomeLivro(String nomeLivro) {
+        this.nomeLivro = nomeLivro;
     }
 
-    public Autor getAutor() {
-        return autor;
+    public String getAutorLivro() {
+        return autorLivro;
     }
 
-    public void setAutor(Autor autor) {
-        this.autor = autor;
+    public void setAutorLivro(String autorLivro) {
+        this.autorLivro = autorLivro;
     }
 
     public String getResumoLivro() {
@@ -69,12 +69,13 @@ public class Livro {
         this.precoLivro = precoLivro;
     }
 
-    public int getIsbnLivro() {
+    public String getIsbnLivro() {
         return isbnLivro;
     }
 
-    public void setIsbnLivro(int isbnLivro) {
+    public void setIsbnLivro(String isbnLivro) {
         this.isbnLivro = isbnLivro;
     }
 
+  
 }
