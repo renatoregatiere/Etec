@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exemplo Validacao 1 </title>
+</head>
+<body>
+	<script language="javascript">
+		/* Faça um programa em JavaScript que solicite 2 notas de 
+		  um aluno(de 0 até 10), calcule e exiba 
+		   as notas, a média das notas e situacao do mesmo, 
+		   sendo que o aluno aprovado é aquele cuja 
+		   média é a partir de 7*/
+		  
+		var nota1, nota2, media, situacao;
+		
+	  
+		//entrada e validação da primeira nota
+		do{
+			nota1=prompt("Nota 1- Digite a nota de 1 a 10");
+			nota1=parseFloat(nota1);
+			if(isNaN(nota1) || nota1<0 || nota1>10)
+			  alert("Nota invalida");
+				 
+		}while(isNaN(nota1) || nota1<0 || nota1>10);
+				 
+		
+		//entrada e validação da segunda nota
+		  do{
+			nota2=prompt("Nota 2- Digite a nota de 1 a 10");
+			nota2=parseFloat(nota2);
+			if(isNaN(nota2) || nota2<0 || nota2>10)
+			  alert("Nota invalida");
+				 
+			}while(isNaN(nota2) || nota2<0 || nota2>10);
+		
+		//calculo da media
+		media= (nota1 + nota2 )/2;
+		
+		//verificando a situacao do aluno
+		if(media>=7)
+		   situacao="Aluno aprovado";
+		else
+		   situacao="Aluno reprovado";
+		
+		//exibindo as informacoes
+		alert("Nota 1: " + nota1 +
+			  "\nNota 2: " + nota2 +
+			  "\nMédia:  "+ media+
+			  "\nSituacao: "+ situacao );
+			  
+		
+		</script>	
+</body>
+</html>
+

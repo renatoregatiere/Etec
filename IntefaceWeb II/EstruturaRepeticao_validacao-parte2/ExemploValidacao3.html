@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo Validacao 3</title>
+</head>
+
+<body>
+  <script>
+    /* Faça um programa em JavaScript que solicite a altura de uma pessoa 
+	(entre 0,80 m e 2,10 m)
+	  e o seu sexo (m ou f) calcule e mostre o peso ideal conforme abaixo:
+      Homens(masculino) – peso ideal = (72.7 * altura )-58
+      Mulheres(feminino) – peso ideal =(62.1 * altura ) – 44.7
+	  
+	  obs: validar altura e sexo*/
+
+    var altura, sexo, result;
+
+    do {
+
+      altura = parseFloat(prompt('Digite sua altura: '));
+      if (altura == "" || altura == null && altura < 0.80 || altura > 2.10) {
+        alert('Altura invalida, digite uma altura entre 0,80m e 2,10m');
+      }
+
+    } while (altura == "" || altura == null && altura < 0.80 || altura > 2.10);
+
+
+    do {
+      sexo = prompt('Digite seu sexo (m ou F)');
+      if(sexo == "" || sexo == null && sexo !='m' && sexo !='M' && sexo !='f' && sexo !='F'){
+        alert('Letra inválida, digite f ou M')
+      }
+
+    } while (sexo == "" || sexo == null && sexo !='m' && sexo !='M' && sexo !='f' && sexo !='F');
+  </script>
+
+
+
+</body>
+
+</html>
