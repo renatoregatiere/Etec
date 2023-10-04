@@ -1,9 +1,13 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package br.com.livraria.controller;
 
+import br.com.livraria.DAO.GenericDAO;
+import br.com.livraria.DAO.LivroDAO;
+import br.com.livraria.model.Livro;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -14,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author renat
+ * @author LABINFO
  */
 @WebServlet(name = "CadastrarLivro", urlPatterns = {"/CadastrarLivro"})
 public class CadastrarLivro extends HttpServlet {
@@ -32,15 +36,39 @@ public class CadastrarLivro extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            
-            String nomeLivro = request.getParameter("nomeLivro");
-            String generoLivro = request.getParameter("generoLivro");
-            String autorLivro = request.getParameter("autorLivro");
-            String resumoLivro = request.getParameter("resumoLivro");
-            String isbnLivro = request.getParameter("isbnLivro");
-            double precoLivro = Double.parseDouble(request.getParameter("precoLivro"));
-    }
-
+           
+          String nomeLivro = request.getParameter("nomeLivro"); 
+          String generoLivro = request.getParameter("generoLivro");
+          String autorLivro = request.getParameter("autorLivro"); 
+          String resumoLivro = request.getParameter("resumoLivro"); 
+          double precoLivro = Double.parseDouble (request.getParameter("precoLivro")); 
+          String isbnLivro = request.getParameter("isbnLivro"); 
+          
+          String mensagem = null;
+          
+          Livro livro = new Livro ();
+          livro.setNomeLivro (nomeLivro);
+          livro.setGeneroLivro (generoLivro);
+          livro.setAutorLivro(autorLivro);
+          livro.setPrecoLivro (precoLivro);
+          livro.setIsbnLivro (isbnLivro);
+          
+          try{
+              GenericDAO dao = new LivroDAO ();
+              if(dao.cadastrar (livro)){
+                  mensagem = "Livro cadastrado com sucesso!";
+              }else {
+                  mensagem = "Problemas ao cadastrar o livro.";
+              }
+              request.setAttribute ("mensagem", mensagem);
+              request.getRequestDispatcher("cadastrarLivro.jsp")
+                .forward(request, response);
+          } catch (Exception e) {
+              out.println("Erro ao cadastrar livro: "+ e.getMessage ());
+              e.printStackTrace();
+          }
+        }
+          }
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

@@ -12,6 +12,7 @@ public class Livro {
 
     private int idLivro;
     private String nomeLivro;
+    private String generoLivro;
     private String autorLivro;
     private String resumoLivro;
     private double precoLivro;
@@ -20,9 +21,10 @@ public class Livro {
     public Livro() {
     }
 
-    public Livro(int idLivro, String nomeLivro, String autorLivro, String resumoLivro, double precoLivro, String isbnLivro) {
+    public Livro(int idLivro, String nomeLivro, String generoLivro, String autorLivro, String resumoLivro, double precoLivro, String isbnLivro) {
         this.idLivro = idLivro;
         this.nomeLivro = nomeLivro;
+        this.generoLivro = generoLivro;
         this.autorLivro = autorLivro;
         this.resumoLivro = resumoLivro;
         this.precoLivro = precoLivro;
@@ -43,6 +45,14 @@ public class Livro {
 
     public void setNomeLivro(String nomeLivro) {
         this.nomeLivro = nomeLivro;
+    }
+
+    public String getGeneroLivro() {
+        return generoLivro;
+    }
+
+    public void setGeneroLivro(String generoLivro) {
+        this.generoLivro = generoLivro;
     }
 
     public String getAutorLivro() {
@@ -76,6 +86,8 @@ public class Livro {
     public void setIsbnLivro(String isbnLivro) {
         this.isbnLivro = isbnLivro;
     }
+
+   
 
   
 }

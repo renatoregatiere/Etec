@@ -13,42 +13,50 @@
         <link href="cadastrarLivro.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+        ${mensagem}
         <div class="container">
             <div class="header">
                 <h2>Cadastrar</h2>
             </div>
-            <form id="form" class="form">
+            <form action="CadastrarLivro" method="POST"  id="form" class="form">
                 <div class="form-control">
                     <label for="username">Nome do livro</label>
-                    <input type="text" placeholder="Nome do livro" id="Nome do livro" />
+                    <input type="text" placeholder="Nome do livro" id="Nome do livro" name="nomeLivro"/>
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
 
                 </div>
                 <div class="form-control">
                     <label for="username">Gênero</label>
-                    <input type="email" placeholder="Gênero" id="Gênero" />
+                    <input type="text" placeholder="Gênero" id="Gênero" name="generoLivro"/>
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
 
                 </div>
                 <div class="form-control">
                     <label for="username">Autor</label>
-                    <input type="password" placeholder="Autor" id="Autor"/>
+                    <input type="text" placeholder="Autor" id="Autor" name="autorLivro"/>
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
 
                 </div>
                 <div class="form-control">
                     <label for="username">Resumo</label>
-                    <input type="password" placeholder="Resumo" id="Resumo"/>
+                    <input type="text" placeholder="Resumo" id="Resumo" name="resumoLivro"/>
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
 
                 </div>
                 <div class="form-control">
                     <label for="username">Preço</label>
-                    <input type="password" placeholder="Preço" id="Preço"/>
+                    <input type="text" placeholder="Preço" id="Preço" name="precoLivro"/>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+
+                </div>
+                <div class="form-control">
+                    <label for="username">isbn</label>
+                    <input type="text" placeholder="Isbn" id="Isbn" name="isbnLivro"/>
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
 
