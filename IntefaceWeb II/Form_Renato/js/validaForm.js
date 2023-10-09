@@ -34,5 +34,22 @@ function validaCheck() {
                 ling = ling + ' ' + check[i].value;
     }
     resp = document.getElementById('caixaResposta');
-    resp.innerHTML = 'Linguagens Selecionadas:' < br > +ling;
+    resp.innerHTML = 'Linguagens Selecionadas: <br>' + ling;
+}
+
+function validaSelect() {
+    var cidade;
+    cidade = document.getElementById('cidade');
+    if (cidade.selectedIndex == 0) {
+        alert('Indique sua idade');
+        return false;
+    } else {
+        var cid, indiceCidadeSelecionada, cidadeSelecionada;
+        cidadeSelecionada = document.getElementById('cidade');
+        indiceCidadeSelecionada = cidadeSelecionada.selectedIndex;
+        cid = cidadeSelecionada.options[indiceCidadeSelecionada].value;
+
+        resp = document.getElementById('caixaResposta');
+        resp.innerHTML = 'Cidade' + cid;
+    }
 }
