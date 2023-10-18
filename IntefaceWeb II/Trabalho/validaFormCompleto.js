@@ -81,7 +81,7 @@ function validaTudo() {
 	qteCheck = check.length;
 	for (i = 0; i < qteCheck; i++) {
 		if (check[i].checked)
-			ling = ling + " " + check[i].value;
+			ling = ling + ", " + check[i].value;
 	}
 
 	// pegando o select selecionada 
