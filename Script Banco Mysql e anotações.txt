@@ -1,0 +1,166 @@
+Create schema BDestoqueT2;
+
+CREATE TABLE Grupo
+(codgrupo int not null,
+Descricao varchar(50),
+constraint Pk_grupo PRIMARY KEY (codgrupo));
+
+insert into grupo values (1,'Blusa');
+insert into grupo values (2,'Calça');
+insert into grupo values (3,'Camiseta');
+insert into grupo values (4,'Sapato');
+insert into grupo values (5,'Vestido');
+insert into grupo values (6,'Bone');
+insert into grupo values (7,'Jaqueta');
+
+CREATE TABLE Marca
+(codmarca int not null,
+Descricao varchar(50),
+constraint Pk_marca PRIMARY KEY (codmarca));
+
+Insert Into marca (codMarca, descricao) values (1,'Nike');
+Insert Into marca (codMarca, descricao) values (2,'Penalty');
+Insert Into marca (codMarca, descricao) values (3,'Adidas');
+Insert Into marca (codMarca, descricao) values (4,'Olimpikus');
+Insert Into marca (codMarca, descricao) values (5,'Topper');
+
+
+
+
+create table produto(
+codproduto int not null primary key,
+descricao varchar(50) ,
+quantidade numeric(9,2),
+codmarca int,
+codgrupo int,
+pr_unitario numeric(9,2),
+constraint fk_marca foreign key (codmarca) references marca (codmarca),
+constraint fk_grupo foreign key (codgrupo) references grupo (codgrupo));
+
+insert into produto(codproduto,descricao,quantidade,codmarca,codgrupo,pr_unitario) values(1, 'Blusa Rosa',10,1,1,10.5);
+insert into produto(codproduto,descricao,quantidade,codmarca,codgrupo,pr_unitario) values(2, 'Tenis',10,1,4,15.00);
+insert into produto(codproduto,descricao,quantidade,codmarca,codgrupo,pr_unitario) values(3, 'Meia curta',8,4,4,18.45);
+insert into produto(codproduto,descricao,quantidade,codmarca,codgrupo,pr_unitario) values(4, 'Chuteira 39',10,5,4,65.00);
+insert into produto(codproduto,descricao,quantidade,codmarca,codgrupo,pr_unitario) values(5, 'Shorts',10,3,5,120.75); 
+
+
+
+
+
+
+
+---------------------------------------------------------------
+
+
+
+/* drop table produto; é usado para apagar a tabela de produtos */ 
+
+select * from produto
+where
+##descricao like 'B%' comando de todos os produtos que tenham a letra b no nome.
+##codgrupo >=1 and codgrupo <=4
+##codgrupo between 1 and 4
+##codgrupo <>4
+## select codProduto , descricao from produto 
+select concat(  codproduto,'-', descricao)Descricao from produto ; //descrição da coluna por numero e traço com apelido na tabela.
+select concat('insert into produto values (',codproduto,',','''',descricao,'''',');') from produto ; 
+## 4 apostrofos vira um apostrofo no codigo ('''' == ').
+
+Função de Grupo
+select 
+from 
+where 
+order by 
+
+----gruop by---
+comandos do gruop by 
+cont(*)
+//o código a baixo mostra a quantidade de linhas encontradas. 
+select count(*) from produto;
+-----------------------------------------------
+//a baixo temos o cod junto com o produto.
+select Codgrupo, count(*)Qtde_Produto from produto
+group by
+codgrupo
+------------------------------------------------
+cont com grupo e marca 
+select Codmarca,Codgrupo, count(*)Qtde_Produto from produto
+group by
+codmarca , codgrupo;
+---------------------------------------------------------------
+sum --- somatoria
+o codigo a baixo me mostra a somatoria de todos os produtos 
+select Sum(quantidade)Qtde_Total_Produto from produto
+---------------------------------------------------------------
+somatoria por grupo pelo codigo e quantidade total do produto 
+select codgrupo,Sum(quantidade)Qtde_Total_Produto from produto
+group by 
+codgrupo
+----------------------------------------------------------------
+somatoria por marca e qtde de intes.
+select codmarca,Sum(quantidade)Qtde_Total_Produto from produto
+group by 
+codmarca
+-----------------------------------------------------------------
+somatoria rentornado marca qtd de produtos e valor em reais total.
+select codmarca,
+Sum(quantidade)Qtde_Total_Produto,
+Sum(quantidade * pr_unitario)Total_Reais
+from produto
+group by 
+codmarca
+------------------------------------------------------------------
+
+
+max--- maior valor 
+valor maior mostado no codigo em destaque pelo *
+select codmarca,
+sum(quantidade)Qtde_Total_Produto,
+sum(quantidade * pr_unitario)Total_Reais,
+**max(pr_unitario) Maior_valor,
+min(pr_unitario) Menor_valor
+from produto
+group by 
+codmarca
+
+------------------------------------------------------------------
+min ---- menor valor 
+valor minimo mostrado pelo *
+select codmarca,
+sum(quantidade)Qtde_Total_Produto,
+sum(quantidade * pr_unitario)Total_Reais,
+max(pr_unitario) Maior_valor,
+**min(pr_unitario) Menor_valor
+from produto
+group by 
+codmarca
+
+-----------------------------------------------------------------
+average ----- media que  no Mysql é o ((avg)).
+tras a media que no exemplo relacionamos ao preço.
+select codmarca,
+sum(quantidade)Qtde_Total_Produto,
+sum(quantidade * pr_unitario)Total_Reais,
+max(pr_unitario) Maior_valor,
+min(pr_unitario) Menor_valor,
+**avg(pr_unitario) Media_do_preço
+from produto
+group by 
+codmarca
+
+-----------------------------------------------------------------
+
+Select com JOIN
+
+ select p.codproduto, p.Descricao Produto, m.Descricao Marca
+from produto as p 
+join marca as m ON p.codmarca = m.codmarca
+where  m.codmarca = 1
+order by m.Descricao
+
+
+
+
+
+
+
