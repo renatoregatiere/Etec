@@ -17,17 +17,6 @@ h2{
     color: white;
 }
 
-.login-page {
-    width: 360px;
-    padding: 8% 0 0;
-    margin: auto;
-  }
-
-.login-page {
-  width: 360px;
-  padding: 8% 0 0;
-  margin: auto;
-}
 
 body {
     background: #76b852; /* fallback for old browsers */
@@ -38,7 +27,7 @@ body {
     -moz-osx-font-smoothing: grayscale;      
   }
 
-form{
+form {
     position: relative;
     z-index: 1;
     background: #FFFFFF;
@@ -50,9 +39,9 @@ form{
 
 }
 
-.form input {
+input {
     font-family: "Roboto", sans-serif;
-    outline: 0;
+    outline: 15z;
     background: #f2f2f2;
     width: 100%;
     border: 0;
@@ -62,7 +51,7 @@ form{
     font-size: 14px;
   }
 
-  .form button {
+   button {
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     outline: 0;
@@ -77,6 +66,9 @@ form{
     cursor: pointer;
   }
 
-  .form button:hover,.form button:active,.form button:focus {
-    background: #43A047;
+  label{
+    color: #4CAF50;
+    font-weight: bolder;
   }
+
+ 

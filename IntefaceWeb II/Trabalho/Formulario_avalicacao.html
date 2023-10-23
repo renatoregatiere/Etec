@@ -18,7 +18,7 @@
     <h2> Cursos de idiomas </h2>
 
 
-    <form name="frmCadastro" method="post">
+    <form name="form" method="post">
         <label for="nome"> Nome completo</label>
         <input type="text" name="nome" id="nome">
         <br>
@@ -26,7 +26,7 @@
         <input type="text" telefone="telefone" id="telefone">
         <br>
 
-        <form name="frmLinguagem" method="post">
+        <form name="form" method="post">
             <label for="linguagem"><br> Escolha um idioma</label>
             <br>
             <input type="checkbox" name="idioma" value="Portugues"> Portuguges<br>
@@ -35,7 +35,7 @@
             <input type="checkbox" name="idioma" value="Mandarim"> Mandarim<br>
             <br>
 
-            <form name="frmInteresse" method="post">
+            <form name="form" method="post">
                 <label for="horario"> Qual horário você deseja fazer?</label>
                 <br>
                 <input type="radio" name="horario" id="horario1" value="Manhã"> Manhã <br>
@@ -44,7 +44,7 @@
                 <input type="radio" name="horario" id="horario4" value="Noite"> EAD <br>
                 <br>
 
-                <form name="frmInteresse" method="post">
+                <form name="form" method="post">
                     <label for="horario"> Qual seu sexo?</label>
                     <br>
                     <input type="radio" name="sexo" id="sexo1" value="Masculino"> Masculino <br>
@@ -52,7 +52,7 @@
                     <input type="radio" name="sexo" id="sexo3" value="Todes"> Todes <br>
                     <br>
 
-                    <form name="frmCidade" method="post">
+                    <form name="form" method="post">
                         <label for="cidade"> Cidade</label>
                         <select name="cidade" id="cidade">
                             <option value="">---cidade---</option>
@@ -63,7 +63,7 @@
                         </select>
 
                         <br>
-
+                        
                         <input type="button" value="Enviar" onclick="return validaTudo()">
                         <input type="reset" value="Limpar" onclick="limparCaixaResposta()">
 
