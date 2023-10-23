@@ -1,74 +1,82 @@
-
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 #caixaResposta {
-    width: 300px;
-    height: 150px;
-    background-color: rgb(118, 221, 78);
-    border-radius: 4px;
-    padding: 20px;
+  height: 150px;
+  background-color: rgb(118, 221, 78);
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 20px;
+  width: auto;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.534);  
 }
 
-
-
-h2{
-    font-size: 35px;
-    text-align: center;
-    color: white;
+h2 {
+  font-size: 35px;
+  text-align: center;
+  color: white;
 }
-
 
 body {
-    background: #76b852; /* fallback for old browsers */
-    background: rgb(141,194,111);
-    background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
-    font-family: "Roboto", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;      
-  }
-
-form {
-    position: relative;
-    z-index: 1;
-    background: #FFFFFF;
-    max-width: 360px;
-    margin: 0 auto 100px;
-    padding: 45px;
-    text-align: center;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-
+  background: #76b852;
+  background: rgb(141, 194, 111);
+  background: linear-gradient(90deg, rgba(141, 194, 111, 1) 0%, rgba(118, 184, 82, 1) 50%);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-input {
-    font-family: "Roboto", sans-serif;
-    outline: 15z;
-    background: #f2f2f2;
-    width: 100%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px;
-  }
+form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
 
-   button {
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    outline: 0;
-    background: #4CAF50;
-    width: 100%;
-    border: 0;
-    padding: 15px;
-    color: #FFFFFF;
-    font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
-    cursor: pointer;
-  }
+.caixatexto {
+  font-family: "Roboto", sans-serif;
+  background: #f2f2f2;
+  width: 100%;
+  border-radius: 5px;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.radio{
+  font-family: "Roboto", sans-serif;
+  background: #bd2121;
+  border: 0;
+  margin: 0 0 6px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
 
-  label{
-    color: #4CAF50;
-    font-weight: bolder;
-  }
+.botao {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 150px;  
+  margin-top: 10px;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 15px;
+  
+}
 
- 
+label {
+  color: #4CAF50;
+  font-weight: bolder;
+}
