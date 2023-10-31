@@ -1,4 +1,6 @@
-Create schema BDestoqueT2;
+Create schema BDestoque;
+
+USE BDestoque;
 
 CREATE TABLE Grupo
 (codgrupo int not null,
@@ -24,9 +26,6 @@ Insert Into marca (codMarca, descricao) values (3,'Adidas');
 Insert Into marca (codMarca, descricao) values (4,'Olimpikus');
 Insert Into marca (codMarca, descricao) values (5,'Topper');
 
-
-
-
 create table produto(
 codproduto int not null primary key,
 descricao varchar(50) ,
@@ -43,16 +42,26 @@ insert into produto(codproduto,descricao,quantidade,codmarca,codgrupo,pr_unitari
 insert into produto(codproduto,descricao,quantidade,codmarca,codgrupo,pr_unitario) values(4, 'Chuteira 39',10,5,4,65.00);
 insert into produto(codproduto,descricao,quantidade,codmarca,codgrupo,pr_unitario) values(5, 'Shorts',10,3,5,120.75); 
 
+update marca set
+descricao = 'Olympikus'
+where
+codmarca = 4;
 
+alter table produto add column vlr_venda decimal (8.2);
 
+update produto set
+vlr_venda = pr_unitario * 1.50
+where 
+codproduto >=1;
 
+update produto set
+quantidade = quantidade + 10
+where
+codproduto = 4;
 
 
 
 ---------------------------------------------------------------
-
-
-
 /* drop table produto; é usado para apagar a tabela de produtos */ 
 
 select * from produto
@@ -110,8 +119,6 @@ from produto
 group by 
 codmarca
 ------------------------------------------------------------------
-
-
 max--- maior valor 
 valor maior mostado no codigo em destaque pelo *
 select codmarca,
@@ -134,7 +141,6 @@ max(pr_unitario) Maior_valor,
 from produto
 group by 
 codmarca
-
 -----------------------------------------------------------------
 average ----- media que  no Mysql é o ((avg)).
 tras a media que no exemplo relacionamos ao preço.
@@ -147,20 +153,33 @@ min(pr_unitario) Menor_valor,
 from produto
 group by 
 codmarca
-
 -----------------------------------------------------------------
-
 Select com JOIN
 
- select p.codproduto, p.Descricao Produto, m.Descricao Marca
+select p.codproduto, p.Descricao Produto, m.Descricao Marca
 from produto as p 
 join marca as m ON p.codmarca = m.codmarca
 where  m.codmarca = 1
 order by m.Descricao
+-----------------------------------------------------------------
+Update e delete
 
+update<tabela> set
+<coluna> = <valor>
+coluna2> = <valor2>
+where <condicao>;
 
+update marca set
+descricao = 'Olympikus'
+where
+codmarca = 4;
+-----------------------------------------------------------------
+Adicionar Coluna em uma tabela
 
+alter table produto add column vlr_venda decimal (8.2);
+-----------------------------------------------------------------
+Deletar registros
 
-
-
-
+DELETE MARCA
+WHERE
+CODMARCA = 3
