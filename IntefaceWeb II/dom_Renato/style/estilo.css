@@ -1,0 +1,35 @@
+body{
+    background-color: black;
+}
+
+#area1{
+    background: red;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    
+}
+#area2{
+    background: blue;
+    color: white;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;    
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+#area3{
+    background: yellow;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
