@@ -59,6 +59,29 @@ quantidade = quantidade + 10
 where
 codproduto = 4;
 
+CREATE TABLE cliente
+(codcliente int not null,
+Nome varchar(50) not null,
+endereco varchar(50) not null,
+cpf numeric(11),
+constraint Pk_cliente PRIMARY KEY (codcliente));
+ 
+create table compra(
+codcompra int not null primary key,
+data date ,
+codcliente int,
+constraint fkcliente foreign key (codcliente) references cliente(codcliente));
+ 
+create table compraproduto(
+codcompra int not null,
+codproduto int not null,
+qtde numeric,
+vlr_unitario numeric,
+constraint fkproduto foreign key (codproduto) references produto(codproduto),
+costraint fkcompra foreign key (codcompra) references compra(codcompra),
+constraint pkcompra primary key (codcompra, codproduto));
+
+
 
 
 ---------------------------------------------------------------
