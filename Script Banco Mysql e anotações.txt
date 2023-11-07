@@ -1,3 +1,64 @@
+Create schema BDestoque;
+
+USE BDestoque;
+
+CREATE TABLE Grupo
+(codgrupo int not null,
+Descricao varchar(50),
+constraint Pk_grupo PRIMARY KEY (codgrupo));
+
+insert into grupo values (1,'Blusa');
+insert into grupo values (2,'Calça');
+insert into grupo values (3,'Camiseta');
+insert into grupo values (4,'Sapato');
+insert into grupo values (5,'Vestido');
+insert into grupo values (6,'Bone');
+insert into grupo values (7,'Jaqueta');
+
+CREATE TABLE Marca
+(codmarca int not null,
+Descricao varchar(50),
+constraint Pk_marca PRIMARY KEY (codmarca));
+
+Insert Into marca (codMarca, descricao) values (1,'Nike');
+Insert Into marca (codMarca, descricao) values (2,'Penalty');
+Insert Into marca (codMarca, descricao) values (3,'Adidas');
+Insert Into marca (codMarca, descricao) values (4,'Olimpikus');
+Insert Into marca (codMarca, descricao) values (5,'Topper');
+
+create table produto(
+codproduto int not null primary key,
+descricao varchar(50) ,
+quantidade numeric(9,2),
+codmarca int,
+codgrupo int,
+pr_unitario numeric(9,2),
+constraint fk_marca foreign key (codmarca) references marca (codmarca),
+constraint fk_grupo foreign key (codgrupo) references grupo (codgrupo));
+
+insert into produto(codproduto,descricao,quantidade,codmarca,codgrupo,pr_unitario) values(1, 'Blusa Rosa',10,1,1,10.5);
+insert into produto(codproduto,descricao,quantidade,codmarca,codgrupo,pr_unitario) values(2, 'Tenis',10,1,4,15.00);
+insert into produto(codproduto,descricao,quantidade,codmarca,codgrupo,pr_unitario) values(3, 'Meia curta',8,4,4,18.45);
+insert into produto(codproduto,descricao,quantidade,codmarca,codgrupo,pr_unitario) values(4, 'Chuteira 39',10,5,4,65.00);
+insert into produto(codproduto,descricao,quantidade,codmarca,codgrupo,pr_unitario) values(5, 'Shorts',10,3,5,120.75); 
+
+update marca set
+descricao = 'Olympikus'
+where
+codmarca = 4;
+
+alter table produto add column vlr_venda decimal (8.2);
+
+update produto set
+vlr_venda = pr_unitario * 1.50
+where 
+codproduto >=1;
+
+update produto set
+quantidade = quantidade + 10
+where
+codproduto = 4;
+
 CREATE TABLE cliente
 (codcliente int not null,
 Nome varchar(50) not null,
