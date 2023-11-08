@@ -1,0 +1,35 @@
+#imagemMiniatura{ 
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	
+	
+}
+
+#imagemMaior{ 
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	margin:20px;
+}
+
+
+
+#imagemPrincipal{
+	width: 300px;
+	height:600px;
+	
+}
+#miniatura1,#miniatura2,#miniatura3,#miniatura4,#miniatura5{
+	width: 100px;
+	height:100px;
+}
+.nomeProduto{
+  text-align:center;	
+}
+#textoProduto{
+	 text-align:center;
+	 margin-top:50px;
+	 
+	 
+}
