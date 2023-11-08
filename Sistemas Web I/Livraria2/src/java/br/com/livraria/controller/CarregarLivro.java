@@ -7,7 +7,6 @@ package br.com.livraria.controller;
 
 import br.com.livraria.DAO.GenericDAO;
 import br.com.livraria.DAO.LivroDAO;
-import br.com.livraria.model.Livro;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -20,8 +19,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author LABINFO
  */
-@WebServlet(name = "CadastrarLivro", urlPatterns = {"/CadastrarLivro"})
-public class CadastrarLivro extends HttpServlet {
+@WebServlet(name = "CarregarLivro", urlPatterns = {"/CarregarLivro"})
+public class CarregarLivro extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,39 +35,21 @@ public class CadastrarLivro extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-           
-          String nomeLivro = request.getParameter("nomeLivro"); 
-          String generoLivro = request.getParameter("generoLivro");
-          String autorLivro = request.getParameter("autorLivro"); 
-          String resumoLivro = request.getParameter("resumoLivro"); 
-          double precoLivro = Double.parseDouble (request.getParameter("precoLivro")); 
-          String isbnLivro = request.getParameter("isbnLivro"); 
-          
-          String mensagem = null;
-          
-          Livro livro = new Livro ();
-          livro.setNomeLivro (nomeLivro);
-          livro.setGeneroLivro (generoLivro);
-          livro.setAutorLivro(autorLivro);
-          livro.setPrecoLivro (precoLivro);
-          livro.setIsbnLivro (isbnLivro);
-          
-          try{
-              GenericDAO dao = new LivroDAO ();
-              if(dao.cadastrar (livro)){
-                  mensagem = "Livro cadastrado com sucesso!";
-              }else {
-                  mensagem = "Problemas ao cadastrar o livro.";
-              }
-              request.setAttribute ("mensagem", mensagem);
-              request.getRequestDispatcher("cadastrarLivro.jsp")
-                .forward(request, response);
-          } catch (Exception e) {
-              out.println("Erro ao cadastrar livro: "+ e.getMessage ());
-              e.printStackTrace();
-          }
+            /* TODO output your page here. You may use following sample code. */
+            
+            Integer idLivro = Integer.parseInt(request.getParameter("idLivro"));
+            
+            try{
+                GenericDAO dao = new LivroDAO();
+                request.setAttribute("livro", dao.carregar (idLivro));
+                request.getRequestDispatcher("alterarlivro.jsp").forward(request, response);
+            } catch (Exception e){
+                System.out.println("Problemas na servlet ao carregar livro. Err:"+ e.getMessage());
+                e.printStackTrace();
+            }
         }
-          }
+    }
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

@@ -21,7 +21,7 @@ public class ConnectionFactory {
         try {
             //carrega o driver do mysql
             Class.forName("com.mysql.jdbc.Driver");
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/livraria", "root", "");
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/livraria", "root", "123456");
         } catch (Exception e) {
             //envia uma mensagem de erro
             throw new Exception(e.getMessage());

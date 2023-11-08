@@ -13,7 +13,13 @@
         <link href="cadastrarLivro.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        ${mensagem}
+
+
+        <script>
+            function myFunction() {
+                alert("${mensagem}");
+            }
+        </script>
         <div class="container">
             <div class="header">
                 <h2>Cadastrar</h2>
@@ -61,7 +67,7 @@
                     <i class="fas fa-exclamation-circle"></i>
 
                 </div>
-                <button>Cadastrar</button>
+                <button onclick="myFunction()">Cadastrar</button>
             </form>
         </div>
 
