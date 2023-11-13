@@ -1,35 +1,38 @@
-#imagemMiniatura{ 
-	display: flex; 
-	align-items: center; 
+#imagemMiniatura {
+	display: flex;
+	align-items: center;
 	justify-content: center;
-	
-	
 }
 
-#imagemMaior{ 
-	display: flex; 
-	align-items: center; 
+#imagemMaior {
+	display: flex;
+	align-items: center;
 	justify-content: center;
-	margin:20px;
+	margin: 20px;
 }
 
-
-
-#imagemPrincipal{
+#imagemPrincipal {
 	width: 300px;
-	height:600px;
-	
+	height: 600px;
 }
-#miniatura1,#miniatura2,#miniatura3,#miniatura4,#miniatura5{
-	width: 100px;
-	height:100px;
+
+#miniatura1,
+#miniatura2,
+#miniatura3,
+#miniatura4,
+#miniatura5 {
+	width: 65px;
+	height: 100px;
+	border: 2px solid;
+	border-radius: 6px;
+	margin: 2px;
 }
-.nomeProduto{
-  text-align:center;	
+
+.nomeProduto {
+	text-align: center;
 }
-#textoProduto{
-	 text-align:center;
-	 margin-top:50px;
-	 
-	 
+
+#textoProduto {
+	text-align: center;
+	margin-top: 50px;
 }
