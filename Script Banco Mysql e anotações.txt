@@ -81,6 +81,21 @@ constraint fkproduto foreign key (codproduto) references produto(codproduto),
 constraint fkcompra foreign key (codcompra) references compra(codcompra),
 constraint pkcompra primary key (codcompra, codproduto));
 
+insert into cliente values (1, 'Renato','teste1', 123456);
+insert into cliente values (2, 'Ana','teste2', 464646);
+insert into cliente values (3, 'João','teste3', 487774847);
+
+Insert into compra values (1,str_to_date('30/11/2023',"%d/%m/%Y"),1);
+Insert into compra values (2,str_to_date('11/11/2023',"%d/%m/%Y"),2);
+Insert into compra values (3,str_to_date('30/11/2023',"%d/%m/%Y"),3);
+
+insert into compraproduto values (1,1,5,10);
+insert into compraproduto values (1,2,3,15);
+insert into compraproduto values (1,4,5,15);
+insert into compraproduto values (2,4,5,15);
+insert into compraproduto values (2,1,1,18);
+insert into compraproduto values (3,5,5,181);
+
 
 
 
