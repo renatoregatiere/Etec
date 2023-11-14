@@ -111,3 +111,8 @@
     font-weight: bold;    
   }
   
+  header{
+    float: none;
+    margin: 50px;
+    margin-top: -700px;
+  }
