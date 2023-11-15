@@ -1,118 +1,75 @@
-@property --rotate {
-    syntax: "<angle>";
-    initial-value: 132deg;
-    inherits: false;
-  }
-  
-  :root {
-    --card-height: 40vh;
-    --card-width: calc(var(--card-height) / 1.5);
-  }
-  
-  body {
-    min-height: 100vh;
-    background: #212534;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    box-sizing: border-box;
-  }
-  
-  .card {
-    background: #191c29;
-    width: var(--card-width);
-    height: var(--card-height);
-    padding: 3px;
-    position: relative;
-    border-radius: 6px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    font-size: 1.5em;
-    color: rgba(224, 208, 208, 0);
-    cursor: pointer;
-    font-family: cursive;
-  }
-  
-  .card:hover {
-    color: rgb(88 199 250 / 100%);
-    transition: color 1s;
-  }
-  .card:hover:before,
-  .card:hover:after {
-    animation: none;
-    opacity: 0;
-  }
-  
-  .card::before {
-    content: "";
-    width: 104%;
-    height: 102%;
-    border-radius: 8px;
-    background-image: linear-gradient(
-      var(--rotate),
-      #5ddcff,
-      #3c67e3 43%,
-      #4e00c2
-    );
-    position: absolute;
-    z-index: -1;
-    top: -1%;
-    left: -2%;
-    animation: spin 2.5s linear infinite;
-  }
-  
-  .card::after {
-    position: absolute;
-    content: "";
-    top: calc(var(--card-height) / 6);
-    left: 0;
-    right: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    transform: scale(0.8);
-    filter: blur(calc(var(--card-height) / 6));
-    background-image: linear-gradient(
-      var(--rotate),
-      #5ddcff,
-      #3c67e3 43%,
-      #4e00c2
-    );
-    opacity: 1;
-    transition: opacity 0.5s;
-    animation: spin 2.5s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% {
-      --rotate: 0deg;
-    }
-    100% {
-      --rotate: 360deg;
-    }
-  }
-  
-  a {
-    color: #717172;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-weight: bold;
-  }
+header{
+	font-size: 20px;
+	text-align: center;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-  h1 {
-    color: #717172;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-weight: bold;    
-  }
-  
-  header{
-    float: none;
-    margin: 50px;
-    margin-top: -700px;
-  }
+#imagemMiniatura {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#imagemMaior {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 20px;
+}
+
+#imagemPrincipal {
+	width: 410px;
+	height: 500px;
+}
+
+#miniatura1,
+#miniatura2,
+#miniatura3,
+#miniatura4,
+#miniatura5 {
+	width: 65px;
+	height: 100px;
+	border: 2px solid;
+	border-radius: 6px;
+	margin: 2px;
+}
+
+.nomeProduto {
+	text-align: center;
+}
+
+#textoProduto {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.imgindex{
+	height: 100px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	display: flex;
+	
+}
+
+footer{
+	text-align: center;
+}
+
+
+a{
+	font-size: 20px;	
+}
+
+.card{
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.menor{
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+	margin-bottom: 50px;
+}
