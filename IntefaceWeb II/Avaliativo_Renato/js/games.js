@@ -38,8 +38,3 @@ function trocaImagem5() {
     p.src = 'img/games6.webp';
     textoProduto.innerHTML = '<h1>Luigis Mansion 3 Luigis Mansion Standard Edition Nintendo Switch Físico</h1>';
 }
-
-function voltarPaginaAnterior() {
-    history. back();
-    document. getElementById("voltar").addEventListener("click", voltarPaginaAnterior);
-}

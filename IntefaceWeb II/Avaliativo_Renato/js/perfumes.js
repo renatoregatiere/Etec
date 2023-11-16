@@ -38,8 +38,3 @@ function trocaImagem5() {
     p.src = 'img/perfume6.webp';
     textoProduto.innerHTML = '<h1>O Boticário Egeo Bomb Black Deo-colônia 90ml para masculino</h1>';
 }
-
-function voltarPaginaAnterior() {
-    history. back();
-    document. getElementById("voltar").addEventListener("click", voltarPaginaAnterior);
-}

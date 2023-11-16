@@ -38,8 +38,3 @@ function trocaImagem5() {
     p.src = 'img/produto6.webp';
     textoProduto.innerHTML = '<h1>Xiaomi Redmi Note 12s 256gb 8gb Ram Lançamento + Nota Fiscal</h1>';
 }
-
-function voltarPaginaAnterior() {
-    history. back();
-    document. getElementById("voltar").addEventListener("click", voltarPaginaAnterior);
-}

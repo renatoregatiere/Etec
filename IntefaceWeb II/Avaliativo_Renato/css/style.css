@@ -1,7 +1,33 @@
-header{
+header {
 	font-size: 20px;
 	text-align: center;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	background: #121FCF;
+background: linear-gradient(to right, #121FCF 31%, #FFFFFF 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+
+}
+
+body {
+	background-color: rgb(54, 54, 54);
+	color: white;
+}
+
+
+.quadroproduto {
+	box-shadow:  rgba(0, 172, 238, 1) 0px 2px 8px 0px;
+	
+	width: 600px;
+	padding: 10px;
+	margin-left: 33%;
 }
 
 #imagemMiniatura {
@@ -20,6 +46,8 @@ header{
 #imagemPrincipal {
 	width: 410px;
 	height: 500px;
+	box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+	border-radius: 5px;
 }
 
 #miniatura1,
@@ -36,40 +64,105 @@ header{
 
 .nomeProduto {
 	text-align: center;
+
 }
 
 #textoProduto {
 	text-align: center;
 	margin-top: 50px;
+	font-size: 10px;
 }
 
-.imgindex{
-	height: 100px;
+.imgindex {
+	height: 150px;
 	margin-top: 100px;
-	margin-bottom: 100px;
+	margin-bottom: 5px;
 	display: flex;
-	
-}
-
-footer{
-	text-align: center;
 }
 
 
-a{
-	font-size: 20px;	
+
+a {
+	font-size: 20px;
+	text-decoration: none;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
-.card{
+a:link {
+	color: rgb(175, 173, 173);
+}
+
+a:visited {
+	color: rgb(175, 173, 173);
+}
+
+.card {
 	display: flex;
 	text-align: center;
 	align-items: center;
 	justify-content: center;
+
 }
 
-.menor{
+.menor {
 	display: flex;
 	justify-content: center;
-	align-items: center;	
+	align-items: center;
 	margin-bottom: 50px;
+}
+
+footer {
+	text-align: center;
+	position: relative;
+	margin-top: 200px;
+	color: rgb(175, 173, 173);
+}
+
+
+
+
+.btn-3 {
+	background: rgb(0, 172, 238);
+	background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+	width: 130px;
+	height: 40px;
+	line-height: 42px;
+	padding: 0;
+	border: none;
+}
+
+.btn-3:before,
+.btn-3:after {
+	position: fixed;
+	content: "";
+	right: 0;
+	top: 0;
+	left: 0;
+	background: rgba(2, 126, 251, 1);
+	transition: all 0.2s ease;
+}
+
+.btn-3:before {
+	height: 0%;
+	width: 2px;
+}
+
+.btn-3:after {
+	width: 0%;
+	height: 2px;
+}
+
+.btn-3:hover {
+	background: rgb(128, 129, 129);
+	background: linear-gradient(0deg, rgb(199, 199, 199) 0%, rgb(105, 105, 105) 100%);
+	box-shadow: none;
+}
+
+.btn-3:hover:before {
+	height: 100%;
+}
+
+.btn-3:hover:after {
+	width: 100%;
 }

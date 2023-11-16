@@ -38,8 +38,3 @@ function trocaImagem5() {
     p.src = 'img/relogio6.webp';
     textoProduto.innerHTML = '<h1>Relógio Casio G-shock Tábua De Maré G-7900a-4dr * G-rescue</h1>';
 }
-
-function voltarPaginaAnterior() {
-    history. back();
-    document. getElementById("voltar").addEventListener("click", voltarPaginaAnterior);
-}
