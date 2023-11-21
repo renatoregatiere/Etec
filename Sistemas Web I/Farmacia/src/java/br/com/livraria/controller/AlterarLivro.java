@@ -5,9 +5,10 @@
  */
 package br.com.livraria.controller;
 
+import br.com.farmacia.model.remedio;
 import br.com.livraria.DAO.GenericDAO;
 import br.com.livraria.DAO.LivroDAO;
-import br.com.livrariacarol.model.Livro;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -48,7 +49,7 @@ public class AlterarLivro extends HttpServlet {
             
             String mensagem;
             
-            Livro livro = new Livro();
+            remedio livro = new remedio();
             livro.setIdLivro(idLivro);
              livro.setNomeLivro(nomeLivro);
             livro.setGeneroLivro(generoLivro);

@@ -5,8 +5,9 @@
  */
 package br.com.livraria.DAO;
 
+import br.com.farmacia.model.remedio;
 import br.com.livraria.util.ConnectionFactory;
-import br.com.livrariacarol.model.Livro;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -35,7 +36,7 @@ public class LivroDAO implements GenericDAO{
     public Boolean cadastrar(Object object) {
         
         
-        Livro livro = (Livro) object; //realiza a conversão do object para livro
+        remedio livro = (remedio) object; //realiza a conversão do object para livro
         PreparedStatement stmt = null;
         
         String sql = "insert into livro(nomelivro, generolivro,"
@@ -79,7 +80,7 @@ public class LivroDAO implements GenericDAO{
             stmt = conn.prepareStatement(sql);
             rs = stmt.executeQuery();
             while (rs.next()) {
-                Livro livro = new Livro();
+                remedio livro = new remedio();
                 livro.setIdLivro(rs.getInt("idlivro"));
                 livro.setNomeLivro(rs.getString("nomelivro"));
                 livro.setGeneroLivro(rs.getString("generolivro"));
@@ -130,14 +131,14 @@ public class LivroDAO implements GenericDAO{
     public Object carregar(int idObject) {
         PreparedStatement stmt = null;
         ResultSet rs = null;
-        Livro livro = null;
+        remedio livro = null;
         String sql = "select * from livro where idlivro = ?;";
         try {
             stmt = conn.prepareStatement(sql);
             stmt.setInt(1, idObject);
             rs = stmt.executeQuery();
             while (rs.next()) {
-                livro = new Livro();
+                livro = new remedio();
                 livro.setIdLivro(rs.getInt("idlivro"));
                 livro.setNomeLivro(rs.getString("nomelivro"));
                 livro.setGeneroLivro(rs.getString("generolivro"));
@@ -156,7 +157,7 @@ public class LivroDAO implements GenericDAO{
 
     @Override
     public Boolean alterar(Object object) {
-        Livro livro = (Livro) object;
+        remedio livro = (remedio) object;
         PreparedStatement stmt = null;
 
         String sql = "update livro set nomelivro = ?, generolivro = ?, "
