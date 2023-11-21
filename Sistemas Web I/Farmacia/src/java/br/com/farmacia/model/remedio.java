@@ -21,6 +21,15 @@ public class remedio {
     }
 
 
+    public remedio(int idRemedio, String nomeRemedio, String categoriaRemedio, String principioAtivo, double precoRemedio) {
+        this.idRemedio = idRemedio;
+        this.nomeRemedio = nomeRemedio;
+        this.categoriaRemedio = categoriaRemedio;
+        this.principioAtivo = principioAtivo;
+        this.precoRemedio = precoRemedio;
+    }
+
+
     public int getIdRemedio() {
         return this.idRemedio;
     }
@@ -60,6 +69,8 @@ public class remedio {
     public void setPrecoRemedio(double precoRemedio) {
         this.precoRemedio = precoRemedio;
     }
-    
-   
+
+
+
+       
 }

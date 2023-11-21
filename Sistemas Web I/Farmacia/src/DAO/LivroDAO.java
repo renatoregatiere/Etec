@@ -6,7 +6,7 @@
 package br.com.livraria.DAO;
 
 import br.com.farmacia.model.remedio;
-import br.com.livraria.util.ConnectionFactory;
+import util.ConnectionFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
