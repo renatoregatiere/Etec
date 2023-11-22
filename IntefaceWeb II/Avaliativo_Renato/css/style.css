@@ -130,6 +130,7 @@ footer {
 	line-height: 42px;
 	padding: 0;
 	border: none;
+	margin: 5px;
 }
 
 .btn-3:before,
@@ -165,4 +166,10 @@ footer {
 
 .btn-3:hover:after {
 	width: 100%;
+}
+
+.menu{
+	display: flex;
+	justify-content: center;
+	margin: 10px;
 }
