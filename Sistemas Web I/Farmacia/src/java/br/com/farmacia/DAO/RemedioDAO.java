@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.farmacia.model.Remedio;
 import br.com.farmacia.util.ConnectionFactory;
 
 /**
@@ -35,25 +36,22 @@ public class RemedioDAO implements GenericDAO {
     @Override //sobrescrita de método 
     public Boolean cadastrar(Object object) {
 
-        Remedio livro = (Remedio) object; // realiza a conversão de objeto para livro
+        Remedio remedio = (Remedio) object; // realiza a conversão de objeto para remedio
         PreparedStatement stmt = null;
 
-        String sql = "insert into livro (nomelivro, generolivro, "
-                + "autorlivro, resumolivro, precolivro, isbnlivro)"
+        String sql = "insert into remedio (nomeremedio, categoriaremedio, "
+                + "precoremedio)"
                 + "values(?, ?, ?, ?, ?, ?);";
 
         try {
             stmt = conn.prepareStatement(sql);
-            stmt.setString(1, livro.getNomeLivro());
-            stmt.setString(2, livro.getGeneroLivro());
-            stmt.setString(3, livro.getAutorLivro());
-            stmt.setString(4, livro.getResumoLivro());
-            stmt.setDouble(5, livro.getPrecoLivro());
-            stmt.setString(6, livro.getIsbnLivro());
+            stmt.setString(1, remedio.getNomeRemedio());
+            stmt.setString(2, remedio.getCategoriaRemedio());
+            stmt.setDouble(3, remedio.getPrecoRemedio());
             stmt.execute();
             return true;
         } catch (Exception e) {
-            System.out.println("Problemas ao cadastrar livro."
+            System.out.println("Problemas ao cadastrar remedio."
                     + "Erro: " + e.getMessage());
             e.printStackTrace();
             return false;
@@ -69,26 +67,23 @@ public class RemedioDAO implements GenericDAO {
 
     @Override
     public List<Object> listar() {
-        List<Object> livros = new ArrayList<>();
+        List<Object> remedios = new ArrayList<>();
         PreparedStatement stmt = null;
         ResultSet rs = null;
-        String sql = "select * from livro";
+        String sql = "select * from remedio";
         try {
             stmt = conn.prepareStatement(sql);
             rs = stmt.executeQuery();
             while (rs.next()) {
-                Remedio livro = new Remedio();
-                livro.setIdLivro(rs.getInt("idlivro"));
-                livro.setNomeLivro(rs.getString("nomelivro"));
-                livro.setGeneroLivro(rs.getString("generolivro"));
-                livro.setAutorLivro(rs.getString("autorlivro"));
-                livro.setResumoLivro(rs.getString("resumolivro"));
-                livro.setPrecoLivro(rs.getDouble("precolivro"));
-                livro.setIsbnLivro(rs.getString("isbnlivro"));
-                livros.add(livro);
+                Remedio remedio = new Remedio();
+                remedio.setIdRemedio(rs.getInt("idremedio"));
+                remedio.setNomeRemedio(rs.getString("nomeremedio"));
+                remedio.setCategoriRemedio(rs.getString("categoriaremedio"));
+                remedio.setPrecoRemedio(rs.getDouble("precoremedio"));
+                remedios.add(remedio);
             }
         } catch (SQLException ex) {
-            System.out.println("Problemas ao listar livros Dao! Erro:" + ex.getMessage());
+            System.out.println("Problemas ao listar remedios Dao! Erro:" + ex.getMessage());
             ex.printStackTrace();
         } finally {
             try {
@@ -98,7 +93,7 @@ public class RemedioDAO implements GenericDAO {
                 e.printStackTrace();
             }
         }
-        return livros;
+        return remedios;
 
     }
 
@@ -107,40 +102,37 @@ public class RemedioDAO implements GenericDAO {
 public Object carregar(int idObject) {
     PreparedStatement stmt = null;
     ResultSet rs = null;
-    Remedio livro = null;
-    String sql = "select * from livro where idlivro = ?;";
+    Remedio remedio = null;
+    String sql = "select * from remedio where idremedio = ?;";
     try {
         stmt = conn.prepareStatement (sql);
         stmt.setInt(1, idObject);
         rs = stmt.executeQuery();
         while (rs.next()) {
-            livro = new Remedio();
-            livro.setIdLivro(rs.getInt ("idlívro"));
-            livro.setNomeLivro (rs.getString("nomelivro"));
-            livro.setGeneroLivro (rs.getString("generolivro"));
-            livro.setAutorLivro(rs.getString("autorlívro"));
-            livro.setResumoLivro (rs.getString("resumolívro"));
-            livro.setPrecoLivro (rs .getDouble ("precolívro"));
-            livro.setIsbnLivro(rs.getString("isbnlivro"));
+            remedio = new Remedio();
+            remedio.setIdRemedio(rs.getInt ("idremedio"));
+            remedio.setNomeRemedio (rs.getString("nomeremedio"));
+            remedio.setCategoriaReedio (rs.getString("categoiaremedio"));
+            remedio.setPrecoRemedio (rs .getDouble ("precolívro"));
         }
     } catch (SQLException e) {
-    System.out.println("Erro ao carregar livro. Erro: " + e.getMessage());
+    System.out.println("Erro ao carregar remedio. Erro: " + e.getMessage());
     e.printStackTrace();
     }
-    return livro;
+    return remedio;
 }
 
     @Override
     public Boolean excluir(int idObject) {
         PreparedStatement stmt = null;
-        String sql = "delete from livro where idlivro = ?;";
+        String sql = "delete from remedio where idremedio = ?;";
         try{
             stmt = conn.prepareStatement(sql);
             stmt.setInt(1, idObject);
             stmt.execute();
             return true;
         } catch (Exception ex){
-            System.out.println("Problemas ao excluir o livro! Erro"+ex.getMessage());
+            System.out.println("Problemas ao excluir o remedio! Erro"+ex.getMessage());
             ex.printStackTrace();
             return false;      
         } finally{

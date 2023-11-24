@@ -15,14 +15,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.farmacia.DAO.GenericDAO;
 import br.com.farmacia.DAO.RemedioDAO;
-import br.com.farmacia.model.Livro;
+import br.com.farmacia.model.Remedio;
 
 /**
  *
  * @author LABINFO
  */
-@WebServlet(name = "CadastrarLivro", urlPatterns = {"/CadastrarLivro"})
-public class CadastrarLivro extends HttpServlet {
+@WebServlet(name = "CadastrarRemedio", urlPatterns = {"/CadastrarRemedio"})
+public class CadastrarRemedio extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,35 +38,29 @@ public class CadastrarLivro extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
            
-          String nomeLivro = request.getParameter("nomeLivro"); 
-          String generoLivro = request.getParameter("generoLivro");
-          String autorLivro = request.getParameter("autorLivro"); 
-          String resumoLivro = request.getParameter("resumoLivro"); 
-          double precoLivro = Double.parseDouble (request.getParameter("precoLivro")); 
-          String isbnLivro = request.getParameter("isbnLivro"); 
+          String nomeRemedio = request.getParameter("nomeRemedio"); 
+          String categoriaRemedio = request.getParameter("categoriaRemedio");
+          double precoRemedio = Double.parseDouble (request.getParameter("precoRemedio")); 
           
           String mensagem = null;
           
-          Remedio livro = new Remedio ();
-          livro.setNomeLivro (nomeLivro);
-          livro.setGeneroLivro (generoLivro);
-          livro.setAutorLivro(autorLivro);
-          livro.setResumoLivro(resumoLivro);
-          livro.setPrecoLivro (precoLivro);
-          livro.setIsbnLivro (isbnLivro);
+          Remedio remedio = new Remedio ();
+          remedio.setNomeRemedio (nomeRemedio);
+          remedio.setCategoriRemedio (categoriaRemedio);
+          remedio.setPrecoRemedio (precoRemedio);
           
           try{
               GenericDAO dao = new RemedioDAO ();
-              if(dao.cadastrar (livro)){
-                  mensagem = "Livro cadastrado com sucesso!";
+              if(dao.cadastrar (remedio)){
+                  mensagem = "Remedio cadastrado com sucesso!";
               }else {
-                  mensagem = "Problemas ao cadastrar o livro.";
+                  mensagem = "Problemas ao cadastrar o remedio.";
               }
               request.setAttribute ("mensagem", mensagem);
-              request.getRequestDispatcher("cadastrarLivro.jsp")
+              request.getRequestDispatcher("cadastrarRemedio.jsp")
                 .forward(request, response);
           } catch (Exception e) {
-              out.println("Erro ao cadastrar livro: "+ e.getMessage ());
+              out.println("Erro ao cadastrar remedio: "+ e.getMessage ());
               e.printStackTrace();
           }
         }

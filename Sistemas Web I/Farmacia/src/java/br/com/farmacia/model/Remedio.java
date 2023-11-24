@@ -12,7 +12,7 @@ public class Remedio {
 
     private int idRemedio;
     private String nomeRemedio;
-    private String categoriRemedio;
+    private String categoriaRemedio;
     private double precoRemedio;
 
 
@@ -20,10 +20,10 @@ public class Remedio {
     }
 
 
-    public Remedio(int idRemedio, String nomeRemedio, String categoriRemedio, double precoRemedio) {
+    public Remedio(int idRemedio, String nomeRemedio, String categoriaRemedio, double precoRemedio) {
         this.idRemedio = idRemedio;
         this.nomeRemedio = nomeRemedio;
-        this.categoriRemedio = categoriRemedio;
+        this.categoriaRemedio = categoriaRemedio;
         this.precoRemedio = precoRemedio;
     }
 
@@ -44,12 +44,12 @@ public class Remedio {
         this.nomeRemedio = nomeRemedio;
     }
 
-    public String getCategoriRemedio() {
-        return this.categoriRemedio;
+    public String getCategoriaRemedio() {
+        return this.categoriaRemedio;
     }
 
     public void setCategoriRemedio(String categoriRemedio) {
-        this.categoriRemedio = categoriRemedio;
+        this.categoriaRemedio = categoriRemedio;
     }
 
     public double getPrecoRemedio() {
