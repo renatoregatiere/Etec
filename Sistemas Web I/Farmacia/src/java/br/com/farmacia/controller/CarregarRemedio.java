@@ -20,8 +20,8 @@ import br.com.farmacia.DAO.RemedioDAO;
  *
  * @author LABINFO
  */
-@WebServlet(name = "ListarLivros", urlPatterns = {"/ListarLivros"})
-public class ListarLivros extends HttpServlet {
+@WebServlet(name = "CarregarRemedio", urlPatterns = {"/CarregarRemedio"})
+public class CarregarRemedio extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,14 +36,16 @@ public class ListarLivros extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-         
-        
-            try {
-                GenericDAO dao = new RemedioDAO ();
-                request.setAttribute("livros", dao.listar());
-                request.getRequestDispatcher ("listarlivros.jsp").forward(request, response);
-            } catch (Exception e) {
-                System.out.println("Problemas ao listar livros Servlet! Erro: " + e.getMessage());
+            /* TODO output your page here. You may use following sample code. */
+            
+            Integer idRemedio = Integer.parseInt(request.getParameter("idRemedio"));
+            
+            try{
+                GenericDAO dao = new RemedioDAO();
+                request.setAttribute("remedio", dao.carregar (idRemedio));
+                request.getRequestDispatcher("alterarremedio.jsp").forward(request, response);
+            } catch (Exception e){
+                System.out.println("Problemas na servlet ao carregar remedio. Err:"+ e.getMessage());
                 e.printStackTrace();
             }
         }

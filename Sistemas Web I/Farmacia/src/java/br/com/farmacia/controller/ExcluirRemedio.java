@@ -20,8 +20,8 @@ import br.com.farmacia.DAO.RemedioDAO;
  *
  * @author LABINFO
  */
-@WebServlet(name = "ExcluirLivro", urlPatterns = {"/ExcluirLivro"})
-public class ExcluirLivro extends HttpServlet {
+@WebServlet(name = "ExcluirRemedio", urlPatterns = {"/ExcluirRemedio"})
+public class ExcluirRemedio extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,19 +37,19 @@ public class ExcluirLivro extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            Integer idLivro = Integer.parseInt(request.getParameter("idLIvro"));
+            Integer idRemedio = Integer.parseInt(request.getParameter("idRemedio"));
 
             String mensagem = null;
 
             try {
                 GenericDAO dao = new RemedioDAO();
-                if (dao.excluir(idLivro)) {
-                    mensagem = "Livro excluido com sucesso!";
+                if (dao.excluir(idRemedio)) {
+                    mensagem = "Remedio excluido com sucesso!";
                 } else {
-                    mensagem = "Problemas ao excluir livro!";
+                    mensagem = "Problemas ao excluir remedio!";
                 }
                 request.setAttribute(mensagem, mensagem);
-                request.getRequestDispatcher("ListarLivros").forward(request, response);
+                request.getRequestDispatcher("ListarRemedio").forward(request, response);
             } catch (Exception e) {
                 System.out.print("Problemas ao Servlet ao excluir o aluno!" + "Erro: " + e.getMessage());
                 e.printStackTrace();

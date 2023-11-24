@@ -14,24 +14,20 @@
     <body>
         ${mensagem}
         
-        <form name="alterarlivro" action="AlterarLivro" method="POST">
+        <form name="alterarremedio" action="AlterarRemedio" method="POST">
             
-            <h5>Alterar Livro</h5>
+            <h5>Alterar Remedio</h5>
             
             <label>Id</label>
-            <input type="text" name="nomeLivro" value="${livro.idLivro}"/>
+            <input type="text" name="nomeRemedio" value="${remedio.idRemedio}"/>
             
-             <label>Gêgenro</label>
-             <select name="generoLivro">
-                 <option value="${livro.generoLivro}">${livro.generoLivro}</option>
-                 <option value="ficcao">Ficcão</option>
-                 <option value="nao-ficcao">Não Ficcão</option>
-                 <option value="romance">Romance</option>
-                 <option value="misterio">Mistério</option>
-                 <option value="fantasia">fantasia</option>
-                 <option value="ciencia">Ciência</option>
-                 <option value="historia">História</option>
-                 <option value="biografia">Biografia</option>
+             <label>Categoria</label>
+             <select name="categoriaRemedio">
+                 <option value="${remedio.categoriaRemedio}">${remedio.categoriaRemedio}</option>
+                 <option value="generico">Genérico</option>
+                 <option value="similar">Similar</option>
+                 <option value="outros">Outros</option>
+                 
              </select>
                  
             <label>Autor</label>
